@@ -19,12 +19,22 @@
 .repoDetailsContainer{
     width:80%;
 }
+.starsSpan{
+    background-color: #ffff0047;
+}
+.issuesSpan{
+    background-color: #ff00006e;
+}
 .starsSpan , .issuesSpan{
     border: 1px solid black;
     padding: 4px;
 }
 .issuesSpan , .submissionDateSpan{
     margin-left: 14px;
+}
+.ownerNameSpan{
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 @media only screen and (max-width: 730px) {

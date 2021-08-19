@@ -1,7 +1,12 @@
 import axios from "axios";
 import { useEffect , useState } from "react";
+import {getCurrentDate} from '../../utils/getCurentDate'
+
 
 export default function ReposLogic(pageNumber) {
+
+    //get the current date - 1 month
+    const date = getCurrentDate()
 
     //createa a state for loading it's by default true because the page will be loading first time waiting the data to be fetched 
     const [loading , setLoading] = useState(true);
@@ -20,7 +25,7 @@ export default function ReposLogic(pageNumber) {
 
        axios({
            method: "GET",
-           url: "https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc",
+           url: `https://api.github.com/search/repositories?q=created:>${date}&sort=stars&order=desc`,
            params: {page : pageNumber}
        }).then(response =>{
 
@@ -35,11 +40,10 @@ export default function ReposLogic(pageNumber) {
            //set loading to false because there is no data to fetch
            setLoading(false)
 
-           console.log(response)
        }).catch(error =>{
            console.log(error)
        })
-    }, [pageNumber])
+    }, [pageNumber , date])
     
   return {loading , repos , hasMore }
 }

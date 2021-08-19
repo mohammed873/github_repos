@@ -43,5 +43,22 @@
     }
     .ownerAvatarContainer , .repoDetailsContainer{
         width: 100%;
+        padding: 9%;
+    }
+    .submissionDateSpan{
+        word-break: break-all;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .submissionDateSpan{
+        position: relative;
+        left: 1px;
+        bottom: -26px;
+        margin-left: -147px;
+        word-break: break-all;
+    }
+    .blankDiv{
+        height: 12px;
     }
 }

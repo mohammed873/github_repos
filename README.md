@@ -2,7 +2,7 @@
 <hr>
 <p>this project is for listing all the stars repos in this last 30 days  , this project is created using the React library because it's a well-known library and has alot of buil in features and hooks that helped me in creating this projects </p>
 
-<h3>In order to test and work with this project , follow these instructions</h3>
+<h2>In order to test and work with this project , follow these instructions</h2>
 
 <p> 1) first clone or download this github repo</p>
 <p> 2) after that choose your favorite code editor and open the project  </p>
